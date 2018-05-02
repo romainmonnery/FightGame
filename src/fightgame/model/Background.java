@@ -10,8 +10,8 @@ import javax.imageio.ImageIO;
 public class Background {
 	
 	//attributes which specify the proportions in pixels of the background image
-	private int width = 336;
-	private int height = 800;
+	private int width;
+	private int height;
 	//Image and Arraylist that will contain the image file
 	private Image image;
 	private ArrayList<Image> bImage;

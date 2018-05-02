@@ -1,5 +1,6 @@
 package fightgame.view;
 
+import java.awt.Choice;
 import java.awt.Dimension;
 import java.awt.FlowLayout;
 import java.awt.Graphics;
@@ -24,10 +25,10 @@ import fightgame.model.Damager;
 import fightgame.model.Healer;
 import fightgame.model.Tank;
 
-public class Menu extends JFrame implements ItemListener, ActionListener{
+public class Menu extends JFrame implements ActionListener {
 
 	// declaring all the objects needed to create the menu
-	
+
 	private JLabel texteChoix;
 	private JLabel texteHealer;
 	private JLabel texteDamager;
@@ -42,6 +43,7 @@ public class Menu extends JFrame implements ItemListener, ActionListener{
 	private JPanel panTank;
 	private JComboBox choicePlayer;
 	private JComboBox choiceIA;
+	private JButton validate;
 
 	// constructor of the game menu
 	public Menu() {
@@ -66,8 +68,9 @@ public class Menu extends JFrame implements ItemListener, ActionListener{
 		texteIA = new JLabel();
 		choicePlayer = new JComboBox();
 		choiceIA = new JComboBox();
-		
-		//setting the combo boxes
+		validate = new JButton("Validate choice");
+
+		// setting the combo boxes
 		choicePlayer.setPreferredSize(new Dimension(100, 20));
 		choiceIA.setPreferredSize(new Dimension(100, 20));
 		choicePlayer.addItem("Healer");
@@ -76,8 +79,8 @@ public class Menu extends JFrame implements ItemListener, ActionListener{
 		choiceIA.addItem("Healer");
 		choiceIA.addItem("Damager");
 		choiceIA.addItem("Tank");
-		
-		// setting the text of the JLabel
+
+		// setting the text of the JLabels
 		texteChoix.setText("Choose the class you want to fight with : ");
 		texteHealer.setText("Healer : ");
 		texteDamager.setText("Damager : ");
@@ -97,6 +100,7 @@ public class Menu extends JFrame implements ItemListener, ActionListener{
 		panTank.setBounds(500, 250, 200, 200);
 		choicePlayer.setBounds(235, 590, 100, 20);
 		choiceIA.setBounds(475, 590, 100, 20);
+		validate.setBounds(315, 635, 150, 50);
 
 		// adding the images in the panels
 		panHealer.add(imageHealer);
@@ -115,29 +119,74 @@ public class Menu extends JFrame implements ItemListener, ActionListener{
 		this.add(panTank);
 		this.add(choicePlayer);
 		this.add(choiceIA);
+		this.add(validate);
 
-		choicePlayer.addItemListener(this);
-		choiceIA.addItemListener(this);
+		// adding Action Listeners
 		choicePlayer.addActionListener(this);
 		choiceIA.addActionListener(this);
-		
+		validate.addActionListener(this);
+
 		// last parameters of the window : resizable, close operation and visibility
 		this.setResizable(false);
 		this.setDefaultCloseOperation(EXIT_ON_CLOSE);
 		this.setVisible(true);
 	}
 
-	@Override
-	public void itemStateChanged(ItemEvent e) {
-		//System.out.println("event :" + e.getItem());
-	}
-
+	//method which containts action to when the JButton is clicked
 	@Override
 	public void actionPerformed(ActionEvent e) {
-		System.out.println("event :" + choicePlayer.getSelectedItem());
-		System.out.println("event :" + choiceIA.getSelectedItem());
-		
+	
+		// if the JButton is clicked
+		if (e.getSource() == validate) {
+			//if the player is a healer class
+			if (choicePlayer.getSelectedItem() == "Healer") {
+				//if IA is a healer class
+				if (choiceIA.getSelectedItem() == "Healer") {
+					FightWindow w = new FightWindow("Healer", "Healer");
+					this.dispose();
+				//if IA is a damager class
+				} else if (choiceIA.getSelectedItem() == "Damager") {
+					FightWindow w = new FightWindow("Healer", "Damager");
+					this.dispose();
+				//if IA is a tank class
+				} else if (choiceIA.getSelectedItem() == "Tank") {
+					FightWindow w = new FightWindow("Healer", "Tank");
+					this.dispose();
+				}
+			}
+			//if the player is a damager class
+			if (choicePlayer.getSelectedItem() == "Damager") {
+				//if IA is a healer class
+				if (choiceIA.getSelectedItem() == "Healer") {
+					FightWindow w = new FightWindow("Damager", "Healer");
+					this.dispose();
+				//if IA is a damager class
+				} else if (choiceIA.getSelectedItem() == "Damager") {
+					FightWindow w = new FightWindow("Damager", "Damager");
+					this.dispose();
+				//if IA is a tank class
+				} else if (choiceIA.getSelectedItem() == "Tank") {
+					FightWindow w = new FightWindow("Damager", "Tank");
+					this.dispose();
+				}
+			}
+			//if the player is a tank class
+			if (choicePlayer.getSelectedItem() == "Tank") {
+				//if IA is a healer class
+				if (choiceIA.getSelectedItem() == "Healer") {
+					FightWindow w = new FightWindow("Tank", "Healer");
+					this.dispose();
+				//if IA is a damager class
+				} else if (choiceIA.getSelectedItem() == "Damager") {
+					FightWindow w = new FightWindow("Tank", "Damager");
+					this.dispose();
+				//if IA is a tank class
+				} else if (choiceIA.getSelectedItem() == "Tank") {
+					FightWindow w = new FightWindow("Tank", "Tank");
+					this.dispose();
+				}
+			}
+		}
+
 	}
 }
-
-

@@ -1,6 +1,11 @@
 package fightgame.model;
 
 import java.awt.Image;
+import java.io.File;
+import java.io.IOException;
+import java.util.ArrayList;
+
+import javax.imageio.ImageIO;
 
 public class Tank extends Character {
 
@@ -8,32 +13,24 @@ public class Tank extends Character {
 	private static final int HEALTHPOINT = 5;
 	private static final int ATTACKPOWER = 1;
 
-	//Constructor : create a healer character with tank's caracteristics
+	//Constructor : create a healer character with tank's caracteristics and read the tank's image
 	public Tank() {
 		super(HEALTHPOINT, ATTACKPOWER);
-	}
-
-	@Override
-	public Image getImage() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public void attack() {
-		// TODO Auto-generated method stub
 		
+		bImage = new ArrayList();
+		
+		try {
+			image = ImageIO.read(new File("tauren.png"));
+			bImage.add(image);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 	}
 
+	//Getting the image of a tank character
 	@Override
-	public void block() {
-		// TODO Auto-generated method stub
-		
+	public ArrayList<Image> getImage() {
+		return this.bImage;
 	}
 
-	@Override
-	public void specialPower() {
-		// TODO Auto-generated method stub
-		
-	}
 }

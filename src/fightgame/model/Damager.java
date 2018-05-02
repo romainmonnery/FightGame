@@ -1,6 +1,11 @@
 package fightgame.model;
 
 import java.awt.Image;
+import java.io.File;
+import java.io.IOException;
+import java.util.ArrayList;
+
+import javax.imageio.ImageIO;
 
 public class Damager extends Character{
 
@@ -8,32 +13,24 @@ public class Damager extends Character{
 	private static final int HEALTHPOINT = 3;
 	private static final int ATTACKPOWER = 2;
 
-	//Constructor : create a healer character with damager's caracteristics
+	//Constructor : create a healer character with damager's caracteristics and read the damager's image
 	public Damager() {
 		super(HEALTHPOINT, ATTACKPOWER);
-	}
-
-	@Override
-	public Image getImage() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public void attack() {
-		// TODO Auto-generated method stub
 		
+		bImage = new ArrayList();
+		
+		try {
+			image = ImageIO.read(new File("orc_lord.png"));
+			bImage.add(image);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 	}
 
+	//Getting the image of a damager character
 	@Override
-	public void block() {
-		// TODO Auto-generated method stub
-		
+	public ArrayList<Image> getImage() {
+		return this.bImage;
 	}
 
-	@Override
-	public void specialPower() {
-		// TODO Auto-generated method stub
-		
-	}
 }

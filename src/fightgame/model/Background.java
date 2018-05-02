@@ -36,4 +36,14 @@ public class Background {
 	public ArrayList<Image> getImage() {
 		return this.bImage;
 	}
+	
+	//getter which returns the width of the background
+	public int getWidth() {
+		return this.width;
+	}
+	
+	//getter which returns the height of the background
+	public int getHeight() {
+		return this.height;
+	}
 }

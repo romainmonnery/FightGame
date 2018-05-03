@@ -31,12 +31,12 @@ public class FightWindow extends JFrame {
 	Difficulty r = Difficulty.RANDOM;
 	Difficulty e = Difficulty.EASY;
 	Difficulty d = Difficulty.HARD;
-	
-	public FightWindow(String player, String IA) {
+
+	public FightWindow(String player, String IA, String difficulty) {
 		this.setTitle("FightGame");
 		this.setSize(1500, 1000);
 		this.setLayout(null);
-		
+
 		bPanel = new JPanel();
 		panHealer = new JPanel();
 		panDamager = new JPanel();
@@ -45,26 +45,52 @@ public class FightWindow extends JFrame {
 		imageHealer = new JLabel(new ImageIcon("healer.png"));
 		imageDamager = new JLabel(new ImageIcon("orc_lord.png"));
 		imageTank = new JLabel(new ImageIcon("tauren.png"));
-		
+
 		bPanel.setBounds(0, 0, 1500, 1000);
-		
+
 		bPanel.add(bImage);
 		panHealer.add(imageHealer);
 		panDamager.add(imageDamager);
 		panTank.add(imageTank);
-		
+
 		this.add(bPanel);
 		this.add(panHealer);
 		this.add(panDamager);
 		this.add(panTank);
-		
+
 		if (player == "Healer") {
 			switch (IA) {
 			case "Healer":
+				switch (difficulty) {
+				case "Random":
+					break;
+				case "Easy":
+					break;
+				case "Difficult":
+					break;
+				default :
+					break;
+				}
 				break;
 			case "Damager":
+				switch (difficulty) {
+				case "Random":
+					break;
+				case "Easy":
+					break;
+				case "Difficult":
+					break;
+				}
 				break;
 			case "Tank":
+				switch (difficulty) {
+				case "Random":
+					break;
+				case "Easy":
+					break;
+				case "Difficult":
+					break;
+				}
 				break;
 			default:
 				break;
@@ -74,10 +100,40 @@ public class FightWindow extends JFrame {
 		if (player == "Damager") {
 			switch (IA) {
 			case "Healer":
+				switch (difficulty) {
+				case "Random":
+					break;
+				case "Easy":
+					break;
+				case "Difficult":
+					break;
+				default :
+					break;
+				}
 				break;
 			case "Damager":
+				switch (difficulty) {
+				case "Random":
+					break;
+				case "Easy":
+					break;
+				case "Difficult":
+					break;
+				default :
+					break;
+				}
 				break;
 			case "Tank":
+				switch (difficulty) {
+				case "Random":
+					break;
+				case "Easy":
+					break;
+				case "Difficult":
+					break;
+				default :
+					break;
+				}
 				break;
 			default:
 				break;
@@ -87,10 +143,40 @@ public class FightWindow extends JFrame {
 		if (player == "Tank") {
 			switch (IA) {
 			case "Healer":
+				switch (difficulty) {
+				case "Random":
+					break;
+				case "Easy":
+					break;
+				case "Difficult":
+					break;
+				default :
+					break;
+				}
 				break;
 			case "Damager":
+				switch (difficulty) {
+				case "Random":
+					break;
+				case "Easy":
+					break;
+				case "Difficult":
+					break;
+				default :
+					break;
+				}
 				break;
 			case "Tank":
+				switch (difficulty) {
+				case "Random":
+					break;
+				case "Easy":
+					break;
+				case "Difficult":
+					break;
+				default :
+					break;
+				}
 				break;
 			default:
 				break;
@@ -98,7 +184,8 @@ public class FightWindow extends JFrame {
 		}
 
 		this.setResizable(false);
-		this.setDefaultCloseOperation(EXIT_ON_CLOSE);;
+		this.setDefaultCloseOperation(EXIT_ON_CLOSE);
+		;
 		this.setVisible(true);
-	}	
+	}
 }

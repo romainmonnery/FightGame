@@ -147,61 +147,142 @@ public class Menu extends JFrame implements ActionListener {
 		this.setVisible(true);
 	}
 
-	//method which containts action to when the JButton is clicked
+	// method which containts action to when the JButton is clicked
 	@Override
 	public void actionPerformed(ActionEvent e) {
-	
+
 		// if the JButton is clicked
 		if (e.getSource() == validate) {
-			//if the player is a healer class
+			// if the player is a healer class
 			if (choicePlayer.getSelectedItem() == "Healer") {
-				//if IA is a healer class
+				// if IA is a healer class
 				if (choiceIA.getSelectedItem() == "Healer") {
-					FightWindow w = new FightWindow("Healer", "Healer");
-					this.dispose();
-				//if IA is a damager class
+					// difficulty management
+					if (choiceDifficulty.getSelectedItem() == "Random") {
+						FightWindow w = new FightWindow("Healer", "Healer", "Random");
+						this.dispose();
+					} else if (choiceDifficulty.getSelectedItem() == "Easy") {
+						FightWindow w = new FightWindow("Healer", "Healer", "Easy");
+						this.dispose();
+					} else if (choiceDifficulty.getSelectedItem() == "Difficult") {
+						FightWindow w = new FightWindow("Healer", "Healer", "Difficult");
+						this.dispose();
+					}
+					// if IA is a damager class
 				} else if (choiceIA.getSelectedItem() == "Damager") {
-					FightWindow w = new FightWindow("Healer", "Damager");
-					this.dispose();
-				//if IA is a tank class
+					// difficulty management
+					if (choiceDifficulty.getSelectedItem() == "Random") {
+						FightWindow w = new FightWindow("Healer", "Damager", "Random");
+						this.dispose();
+					} else if (choiceDifficulty.getSelectedItem() == "Easy") {
+						FightWindow w = new FightWindow("Healer", "Damager", "Easy");
+						this.dispose();
+					} else if (choiceDifficulty.getSelectedItem() == "Difficult") {
+						FightWindow w = new FightWindow("Healer", "Damager", "Difficult");
+						this.dispose();
+					}
+					// if IA is a tank class
 				} else if (choiceIA.getSelectedItem() == "Tank") {
-					FightWindow w = new FightWindow("Healer", "Tank");
-					this.dispose();
+					// difficulty management
+					if (choiceDifficulty.getSelectedItem() == "Random") {
+						FightWindow w = new FightWindow("Healer", "Tank", "Random");
+						this.dispose();
+					} else if (choiceDifficulty.getSelectedItem() == "Easy") {
+						FightWindow w = new FightWindow("Healer", "Tank", "Easy");
+						this.dispose();
+					} else if (choiceDifficulty.getSelectedItem() == "Difficult") {
+						FightWindow w = new FightWindow("Healer", "Tank", "Difficult");
+						this.dispose();
+					}
 				}
 			}
-			//if the player is a damager class
+			// if the player is a damager class
 			if (choicePlayer.getSelectedItem() == "Damager") {
-				//if IA is a healer class
+				// if IA is a healer class
 				if (choiceIA.getSelectedItem() == "Healer") {
-					FightWindow w = new FightWindow("Damager", "Healer");
-					this.dispose();
-				//if IA is a damager class
+					// difficulty management
+					if (choiceDifficulty.getSelectedItem() == "Random") {
+						FightWindow w = new FightWindow("Damager", "Healer", "Random");
+						this.dispose();
+					} else if (choiceDifficulty.getSelectedItem() == "Easy") {
+						FightWindow w = new FightWindow("Damager", "Healer", "Easy");
+						this.dispose();
+					} else if (choiceDifficulty.getSelectedItem() == "Difficult") {
+						FightWindow w = new FightWindow("Damager", "Healer", "Difficult");
+						this.dispose();
+					}
+					// if IA is a damager class
 				} else if (choiceIA.getSelectedItem() == "Damager") {
-					FightWindow w = new FightWindow("Damager", "Damager");
-					this.dispose();
-				//if IA is a tank class
+					// difficulty management
+					if (choiceDifficulty.getSelectedItem() == "Random") {
+						FightWindow w = new FightWindow("Damager", "Damager", "Random");
+						this.dispose();
+					} else if (choiceDifficulty.getSelectedItem() == "Easy") {
+						FightWindow w = new FightWindow("Damager", "Damager", "Easy");
+						this.dispose();
+					} else if (choiceDifficulty.getSelectedItem() == "Difficult") {
+						FightWindow w = new FightWindow("Damager", "Damager", "Difficult");
+						this.dispose();
+					}
+					// if IA is a tank class
 				} else if (choiceIA.getSelectedItem() == "Tank") {
-					FightWindow w = new FightWindow("Damager", "Tank");
-					this.dispose();
-				}
+					// difficulty management
+					if (choiceDifficulty.getSelectedItem() == "Random") {
+						FightWindow w = new FightWindow("Damager", "Tank", "Random");
+						this.dispose();
+					} else if (choiceDifficulty.getSelectedItem() == "Easy") {
+						FightWindow w = new FightWindow("Damager", "Tank", "Easy");
+						this.dispose();
+					} else if (choiceDifficulty.getSelectedItem() == "Difficult") {
+						FightWindow w = new FightWindow("Damager", "Tank", "Difficult");
+						this.dispose();
+					}
 			}
-			//if the player is a tank class
+			// if the player is a tank class
 			if (choicePlayer.getSelectedItem() == "Tank") {
-				//if IA is a healer class
+				// if IA is a healer class
 				if (choiceIA.getSelectedItem() == "Healer") {
-					FightWindow w = new FightWindow("Tank", "Healer");
-					this.dispose();
-				//if IA is a damager class
+					// difficulty management
+					if (choiceDifficulty.getSelectedItem() == "Random") {
+						FightWindow w = new FightWindow("Tank", "Healer", "Random");
+						this.dispose();
+					} else if (choiceDifficulty.getSelectedItem() == "Easy") {
+						FightWindow w = new FightWindow("Tank", "Healer", "Easy");
+						this.dispose();
+					} else if (choiceDifficulty.getSelectedItem() == "Difficult") {
+						FightWindow w = new FightWindow("Tank", "Healer", "Difficult");
+						this.dispose();
+					}
+					// if IA is a damager class
 				} else if (choiceIA.getSelectedItem() == "Damager") {
-					FightWindow w = new FightWindow("Tank", "Damager");
-					this.dispose();
-				//if IA is a tank class
+					// difficulty management
+					if (choiceDifficulty.getSelectedItem() == "Random") {
+						FightWindow w = new FightWindow("Tank", "Damager", "Random");
+						this.dispose();
+					} else if (choiceDifficulty.getSelectedItem() == "Easy") {
+						FightWindow w = new FightWindow("Tank", "Dameger", "Easy");
+						this.dispose();
+					} else if (choiceDifficulty.getSelectedItem() == "Difficult") {
+						FightWindow w = new FightWindow("Tank", "Damager", "Difficult");
+						this.dispose();
+					}
+					// if IA is a tank class
 				} else if (choiceIA.getSelectedItem() == "Tank") {
-					FightWindow w = new FightWindow("Tank", "Tank");
-					this.dispose();
+					// difficulty management
+					if (choiceDifficulty.getSelectedItem() == "Random") {
+						FightWindow w = new FightWindow("Tank", "Tank", "Random");
+						this.dispose();
+					} else if (choiceDifficulty.getSelectedItem() == "Easy") {
+						FightWindow w = new FightWindow("Tank", "Tank", "Easy");
+						this.dispose();
+					} else if (choiceDifficulty.getSelectedItem() == "Difficult") {
+						FightWindow w = new FightWindow("Tank", "Tank", "Difficult");
+						this.dispose();
+					}
 				}
 			}
 		}
 
 	}
+}
 }

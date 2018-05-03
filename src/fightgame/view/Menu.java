@@ -21,6 +21,7 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
+import fightgame.controller.Difficulty;
 import fightgame.model.Damager;
 import fightgame.model.Healer;
 import fightgame.model.Tank;
@@ -33,6 +34,7 @@ public class Menu extends JFrame implements ActionListener {
 	private JLabel texteHealer;
 	private JLabel texteDamager;
 	private JLabel texteTank;
+	private JLabel texteDifficulty;
 	private JLabel imageHealer;
 	private JLabel imageDamager;
 	private JLabel imageTank;
@@ -43,6 +45,7 @@ public class Menu extends JFrame implements ActionListener {
 	private JPanel panTank;
 	private JComboBox choicePlayer;
 	private JComboBox choiceIA;
+	private JComboBox choiceDifficulty;
 	private JButton validate;
 
 	// constructor of the game menu
@@ -61,6 +64,7 @@ public class Menu extends JFrame implements ActionListener {
 		texteHealer = new JLabel();
 		texteDamager = new JLabel();
 		texteTank = new JLabel();
+		texteDifficulty = new JLabel();
 		imageHealer = new JLabel(new ImageIcon("healer.png"));
 		imageDamager = new JLabel(new ImageIcon("orc_lord.png"));
 		imageTank = new JLabel(new ImageIcon("tauren.png"));
@@ -68,17 +72,22 @@ public class Menu extends JFrame implements ActionListener {
 		texteIA = new JLabel();
 		choicePlayer = new JComboBox();
 		choiceIA = new JComboBox();
+		choiceDifficulty = new JComboBox();
 		validate = new JButton("Validate choice");
 
 		// setting the combo boxes
 		choicePlayer.setPreferredSize(new Dimension(100, 20));
 		choiceIA.setPreferredSize(new Dimension(100, 20));
+		choiceDifficulty.setPreferredSize(new Dimension(100, 20));
 		choicePlayer.addItem("Healer");
 		choicePlayer.addItem("Damager");
 		choicePlayer.addItem("Tank");
 		choiceIA.addItem("Healer");
 		choiceIA.addItem("Damager");
 		choiceIA.addItem("Tank");
+		choiceDifficulty.addItem("Random");
+		choiceDifficulty.addItem("Easy");
+		choiceDifficulty.addItem("Difficult");
 
 		// setting the text of the JLabels
 		texteChoix.setText("Choose the class you want to fight with : ");
@@ -87,19 +96,22 @@ public class Menu extends JFrame implements ActionListener {
 		texteTank.setText("Tank : ");
 		textePlayer.setText("Choose your class : ");
 		texteIA.setText("Choose IA's class : ");
+		texteDifficulty.setText("Choose the difficulty : ");
 
 		// setting the coordinate and the dimensions of each elements of the game menu
 		texteChoix.setBounds(300, 100, 300, 100);
 		texteHealer.setBounds(100, 200, 100, 100);
 		texteDamager.setBounds(300, 200, 100, 100);
 		texteTank.setBounds(500, 200, 100, 100);
-		textePlayer.setBounds(100, 550, 200, 100);
-		texteIA.setBounds(350, 550, 200, 100);
+		textePlayer.setBounds(50, 550, 200, 100);
+		texteIA.setBounds(300, 550, 200, 100);
+		texteDifficulty.setBounds(525, 550, 200, 100);
 		panHealer.setBounds(100, 250, 200, 200);
 		panDamager.setBounds(300, 250, 200, 200);
 		panTank.setBounds(500, 250, 200, 200);
-		choicePlayer.setBounds(235, 590, 100, 20);
-		choiceIA.setBounds(475, 590, 100, 20);
+		choicePlayer.setBounds(185, 590, 100, 20);
+		choiceIA.setBounds(415, 590, 100, 20);
+		choiceDifficulty.setBounds(660, 590, 100, 20);
 		validate.setBounds(315, 635, 150, 50);
 
 		// adding the images in the panels
@@ -114,16 +126,19 @@ public class Menu extends JFrame implements ActionListener {
 		this.add(texteTank);
 		this.add(textePlayer);
 		this.add(texteIA);
+		this.add(texteDifficulty);
 		this.add(panHealer);
 		this.add(panDamager);
 		this.add(panTank);
 		this.add(choicePlayer);
+		this.add(choiceDifficulty);
 		this.add(choiceIA);
 		this.add(validate);
 
 		// adding Action Listeners
 		choicePlayer.addActionListener(this);
 		choiceIA.addActionListener(this);
+		choiceDifficulty.addActionListener(this);
 		validate.addActionListener(this);
 
 		// last parameters of the window : resizable, close operation and visibility

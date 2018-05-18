@@ -11,6 +11,7 @@ import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JLayeredPane;
 import javax.swing.JPanel;
 
 import fightgame.controller.Difficulty;
@@ -20,14 +21,17 @@ import fightgame.model.Healer;
 
 public class FightWindow extends JFrame {
 
-	private JPanel bPanel;
-	private JPanel panHealer;
-	private JPanel panDamager;
-	private JPanel panTank;
+	private JPanel bPanel;;
 	private JLabel bImage;
-	private JLabel imageHealer;
-	private JLabel imageTank;
-	private JLabel imageDamager;
+	private JLabel imagePHealer;
+	private JLabel imagePTank;
+	private JLabel imagePDamager;
+	private JLabel imageIAHealer;
+	private JLabel imageIATank;
+	private JLabel imageIADamager;
+	private JLayeredPane jlp;
+	private JPanel c1;
+	private JPanel c2;
 	Difficulty r = Difficulty.RANDOM;
 	Difficulty e = Difficulty.EASY;
 	Difficulty d = Difficulty.HARD;
@@ -38,35 +42,62 @@ public class FightWindow extends JFrame {
 		this.setLayout(null);
 
 		bPanel = new JPanel();
-		panHealer = new JPanel();
-		panDamager = new JPanel();
-		panTank = new JPanel();
+		c1 = new JPanel();
+		c2 = new JPanel();
 		bImage = new JLabel(new ImageIcon("BackgroundImage.gif"));
-		imageHealer = new JLabel(new ImageIcon("healer.png"));
-		imageDamager = new JLabel(new ImageIcon("orc_lord.png"));
-		imageTank = new JLabel(new ImageIcon("tauren.png"));
-
-		bPanel.setBounds(0, 0, 1500, 1000);
-
-		bPanel.add(bImage);
-		panHealer.add(imageHealer);
-		panDamager.add(imageDamager);
-		panTank.add(imageTank);
-
-		this.add(bPanel);
-		this.add(panHealer);
-		this.add(panDamager);
-		this.add(panTank);
-
+		imagePHealer = new JLabel(new ImageIcon("healer.png"));
+		imagePDamager = new JLabel(new ImageIcon("orc_lord.png"));
+		imagePTank = new JLabel(new ImageIcon("tauren.png"));
+		imageIAHealer = new JLabel(new ImageIcon("healer.png"));
+		imageIADamager = new JLabel(new ImageIcon("orc_lord.png"));
+		imageIATank = new JLabel(new ImageIcon("tauren.png"));
+		//jlp = new JLayeredPane()
+		
 		if (player == "Healer") {
 			switch (IA) {
 			case "Healer":
 				switch (difficulty) {
 				case "Random":
+					bPanel.add(bImage);
+					bPanel.setOpaque(false);
+					c1.setOpaque(false);
+					c2.setOpaque(false);
+					c1.add(imagePHealer);
+					c2.add(imageIAHealer);
+					c1.setBounds(330, 730, 200, 200);
+					c2.setBounds(1100, 730, 200, 200);
+					bPanel.setBounds(0, 0, 1500, 1000);
+					this.add(c1);
+					this.add(c2);
+					this.add(bPanel);
 					break;
 				case "Easy":
+					bPanel.add(bImage);
+					bPanel.setOpaque(false);
+					c1.setOpaque(false);
+					c2.setOpaque(false);
+					c1.add(imagePHealer);
+					c2.add(imageIAHealer);
+					c1.setBounds(330, 730, 200, 200);
+					c2.setBounds(1100, 730, 200, 200);
+					bPanel.setBounds(0, 0, 1500, 1000);
+					this.add(c1);
+					this.add(c2);
+					this.add(bPanel);
 					break;
 				case "Difficult":
+					bPanel.add(bImage);
+					bPanel.setOpaque(false);
+					c1.setOpaque(false);
+					c2.setOpaque(false);
+					c1.add(imagePHealer);
+					c2.add(imageIAHealer);
+					c1.setBounds(330, 730, 200, 200);
+					c2.setBounds(1100, 730, 200, 200);
+					bPanel.setBounds(0, 0, 1500, 1000);
+					this.add(c1);
+					this.add(c2);
+					this.add(bPanel);
 					break;
 				default :
 					break;
@@ -75,20 +106,92 @@ public class FightWindow extends JFrame {
 			case "Damager":
 				switch (difficulty) {
 				case "Random":
+					bPanel.add(bImage);
+					bPanel.setOpaque(false);
+					c1.setOpaque(false);
+					c2.setOpaque(false);
+					c1.add(imagePHealer);
+					c2.add(imageIADamager);
+					c1.setBounds(330, 730, 200, 200);
+					c2.setBounds(1100, 730, 200, 200);
+					bPanel.setBounds(0, 0, 1500, 1000);
+					this.add(c1);
+					this.add(c2);
+					this.add(bPanel);
 					break;
 				case "Easy":
+					bPanel.add(bImage);
+					bPanel.setOpaque(false);
+					c1.setOpaque(false);
+					c2.setOpaque(false);
+					c1.add(imagePHealer);
+					c2.add(imageIADamager);
+					c1.setBounds(330, 730, 200, 200);
+					c2.setBounds(1100, 730, 200, 200);
+					bPanel.setBounds(0, 0, 1500, 1000);
+					this.add(c1);
+					this.add(c2);
+					this.add(bPanel);
 					break;
 				case "Difficult":
+					bPanel.add(bImage);
+					bPanel.setOpaque(false);
+					c1.setOpaque(false);
+					c2.setOpaque(false);
+					c1.add(imagePHealer);
+					c2.add(imageIADamager);
+					c1.setBounds(330, 730, 200, 200);
+					c2.setBounds(1100, 730, 200, 200);
+					bPanel.setBounds(0, 0, 1500, 1000);
+					this.add(c1);
+					this.add(c2);
+					this.add(bPanel);
 					break;
 				}
 				break;
 			case "Tank":
 				switch (difficulty) {
 				case "Random":
+					bPanel.add(bImage);
+					bPanel.setOpaque(false);
+					c1.setOpaque(false);
+					c2.setOpaque(false);
+					c1.add(imagePHealer);
+					c2.add(imageIATank);
+					c1.setBounds(330, 730, 200, 200);
+					c2.setBounds(1100, 730, 200, 200);
+					bPanel.setBounds(0, 0, 1500, 1000);
+					this.add(c1);
+					this.add(c2);
+					this.add(bPanel);
 					break;
 				case "Easy":
+					bPanel.add(bImage);
+					bPanel.setOpaque(false);
+					c1.setOpaque(false);
+					c2.setOpaque(false);
+					c1.add(imagePHealer);
+					c2.add(imageIATank);
+					c1.setBounds(330, 730, 200, 200);
+					c2.setBounds(1100, 730, 200, 200);
+					bPanel.setBounds(0, 0, 1500, 1000);
+					this.add(c1);
+					this.add(c2);
+					this.add(bPanel);
 					break;
 				case "Difficult":
+					bPanel.add(bImage);
+					bPanel.setOpaque(false);
+					c1.setOpaque(false);
+					c2.setOpaque(false);
+					c1.add(imagePHealer);
+					c2.add(imageIATank);
+					c1.setBounds(330, 730, 200, 200);
+					c2.setBounds(1100, 730, 200, 200);
+					bPanel.setBounds(0, 0, 1500, 1000);
+					this.add(c1);
+					this.add(c2);
+					this.add(bPanel);
 					break;
 				}
 				break;
@@ -102,10 +205,46 @@ public class FightWindow extends JFrame {
 			case "Healer":
 				switch (difficulty) {
 				case "Random":
+					bPanel.add(bImage);
+					bPanel.setOpaque(false);
+					c1.setOpaque(false);
+					c2.setOpaque(false);
+					c1.add(imagePDamager);
+					c2.add(imageIAHealer);
+					c1.setBounds(330, 730, 200, 200);
+					c2.setBounds(1100, 730, 200, 200);
+					bPanel.setBounds(0, 0, 1500, 1000);
+					this.add(c1);
+					this.add(c2);
+					this.add(bPanel);
 					break;
 				case "Easy":
+					bPanel.add(bImage);
+					bPanel.setOpaque(false);
+					c1.setOpaque(false);
+					c2.setOpaque(false);
+					c1.add(imagePDamager);
+					c2.add(imageIAHealer);
+					c1.setBounds(330, 730, 200, 200);
+					c2.setBounds(1100, 730, 200, 200);
+					bPanel.setBounds(0, 0, 1500, 1000);
+					this.add(c1);
+					this.add(c2);
+					this.add(bPanel);
 					break;
 				case "Difficult":
+					bPanel.add(bImage);
+					bPanel.setOpaque(false);
+					c1.setOpaque(false);
+					c2.setOpaque(false);
+					c1.add(imagePDamager);
+					c2.add(imageIAHealer);
+					c1.setBounds(330, 730, 200, 200);
+					c2.setBounds(1100, 730, 200, 200);
+					bPanel.setBounds(0, 0, 1500, 1000);
+					this.add(c1);
+					this.add(c2);
+					this.add(bPanel);
 					break;
 				default :
 					break;
@@ -114,10 +253,46 @@ public class FightWindow extends JFrame {
 			case "Damager":
 				switch (difficulty) {
 				case "Random":
+					bPanel.add(bImage);
+					bPanel.setOpaque(false);
+					c1.setOpaque(false);
+					c2.setOpaque(false);
+					c1.add(imagePDamager);
+					c2.add(imageIADamager);
+					c1.setBounds(330, 730, 200, 200);
+					c2.setBounds(1100, 730, 200, 200);
+					bPanel.setBounds(0, 0, 1500, 1000);
+					this.add(c1);
+					this.add(c2);
+					this.add(bPanel);
 					break;
 				case "Easy":
+					bPanel.add(bImage);
+					bPanel.setOpaque(false);
+					c1.setOpaque(false);
+					c2.setOpaque(false);
+					c1.add(imagePDamager);
+					c2.add(imageIADamager);
+					c1.setBounds(330, 730, 200, 200);
+					c2.setBounds(1100, 730, 200, 200);
+					bPanel.setBounds(0, 0, 1500, 1000);
+					this.add(c1);
+					this.add(c2);
+					this.add(bPanel);
 					break;
 				case "Difficult":
+					bPanel.add(bImage);
+					bPanel.setOpaque(false);
+					c1.setOpaque(false);
+					c2.setOpaque(false);
+					c1.add(imagePDamager);
+					c2.add(imageIADamager);
+					c1.setBounds(330, 730, 200, 200);
+					c2.setBounds(1100, 730, 200, 200);
+					bPanel.setBounds(0, 0, 1500, 1000);
+					this.add(c1);
+					this.add(c2);
+					this.add(bPanel);
 					break;
 				default :
 					break;
@@ -126,10 +301,46 @@ public class FightWindow extends JFrame {
 			case "Tank":
 				switch (difficulty) {
 				case "Random":
+					bPanel.add(bImage);
+					bPanel.setOpaque(false);
+					c1.setOpaque(false);
+					c2.setOpaque(false);
+					c1.add(imagePDamager);
+					c2.add(imageIATank);
+					c1.setBounds(330, 730, 200, 200);
+					c2.setBounds(1100, 730, 200, 200);
+					bPanel.setBounds(0, 0, 1500, 1000);
+					this.add(c1);
+					this.add(c2);
+					this.add(bPanel);
 					break;
 				case "Easy":
+					bPanel.add(bImage);
+					bPanel.setOpaque(false);
+					c1.setOpaque(false);
+					c2.setOpaque(false);
+					c1.add(imagePDamager);
+					c2.add(imageIATank);
+					c1.setBounds(330, 730, 200, 200);
+					c2.setBounds(1100, 730, 200, 200);
+					bPanel.setBounds(0, 0, 1500, 1000);
+					this.add(c1);
+					this.add(c2);
+					this.add(bPanel);
 					break;
 				case "Difficult":
+					bPanel.add(bImage);
+					bPanel.setOpaque(false);
+					c1.setOpaque(false);
+					c2.setOpaque(false);
+					c1.add(imagePDamager);
+					c2.add(imageIATank);
+					c1.setBounds(330, 730, 200, 200);
+					c2.setBounds(1100, 730, 200, 200);
+					bPanel.setBounds(0, 0, 1500, 1000);
+					this.add(c1);
+					this.add(c2);
+					this.add(bPanel);
 					break;
 				default :
 					break;
@@ -145,10 +356,46 @@ public class FightWindow extends JFrame {
 			case "Healer":
 				switch (difficulty) {
 				case "Random":
+					bPanel.add(bImage);
+					bPanel.setOpaque(false);
+					c1.setOpaque(false);
+					c2.setOpaque(false);
+					c1.add(imagePTank);
+					c2.add(imageIAHealer);
+					c1.setBounds(330, 730, 200, 200);
+					c2.setBounds(1100, 730, 200, 200);
+					bPanel.setBounds(0, 0, 1500, 1000);
+					this.add(c1);
+					this.add(c2);
+					this.add(bPanel);
 					break;
 				case "Easy":
+					bPanel.add(bImage);
+					bPanel.setOpaque(false);
+					c1.setOpaque(false);
+					c2.setOpaque(false);
+					c1.add(imagePTank);
+					c2.add(imageIAHealer);
+					c1.setBounds(330, 730, 200, 200);
+					c2.setBounds(1100, 730, 200, 200);
+					bPanel.setBounds(0, 0, 1500, 1000);
+					this.add(c1);
+					this.add(c2);
+					this.add(bPanel);
 					break;
 				case "Difficult":
+					bPanel.add(bImage);
+					bPanel.setOpaque(false);
+					c1.setOpaque(false);
+					c2.setOpaque(false);
+					c1.add(imagePTank);
+					c2.add(imageIAHealer);
+					c1.setBounds(330, 730, 200, 200);
+					c2.setBounds(1100, 730, 200, 200);
+					bPanel.setBounds(0, 0, 1500, 1000);
+					this.add(c1);
+					this.add(c2);
+					this.add(bPanel);
 					break;
 				default :
 					break;
@@ -157,10 +404,46 @@ public class FightWindow extends JFrame {
 			case "Damager":
 				switch (difficulty) {
 				case "Random":
+					bPanel.add(bImage);
+					bPanel.setOpaque(false);
+					c1.setOpaque(false);
+					c2.setOpaque(false);
+					c1.add(imagePTank);
+					c2.add(imageIADamager);
+					c1.setBounds(330, 730, 200, 200);
+					c2.setBounds(1100, 730, 200, 200);
+					bPanel.setBounds(0, 0, 1500, 1000);
+					this.add(c1);
+					this.add(c2);
+					this.add(bPanel);
 					break;
 				case "Easy":
+					bPanel.add(bImage);
+					bPanel.setOpaque(false);
+					c1.setOpaque(false);
+					c2.setOpaque(false);
+					c1.add(imagePTank);
+					c2.add(imageIADamager);
+					c1.setBounds(330, 730, 200, 200);
+					c2.setBounds(1100, 730, 200, 200);
+					bPanel.setBounds(0, 0, 1500, 1000);
+					this.add(c1);
+					this.add(c2);
+					this.add(bPanel);
 					break;
 				case "Difficult":
+					bPanel.add(bImage);
+					bPanel.setOpaque(false);
+					c1.setOpaque(false);
+					c2.setOpaque(false);
+					c1.add(imagePTank);
+					c2.add(imageIADamager);
+					c1.setBounds(330, 730, 200, 200);
+					c2.setBounds(1100, 730, 200, 200);
+					bPanel.setBounds(0, 0, 1500, 1000);
+					this.add(c1);
+					this.add(c2);
+					this.add(bPanel);
 					break;
 				default :
 					break;
@@ -169,10 +452,46 @@ public class FightWindow extends JFrame {
 			case "Tank":
 				switch (difficulty) {
 				case "Random":
+					bPanel.add(bImage);
+					bPanel.setOpaque(false);
+					c1.setOpaque(false);
+					c2.setOpaque(false);
+					c1.add(imagePTank);
+					c2.add(imageIATank);
+					c1.setBounds(330, 730, 200, 200);
+					c2.setBounds(1100, 730, 200, 200);
+					bPanel.setBounds(0, 0, 1500, 1000);
+					this.add(c1);
+					this.add(c2);
+					this.add(bPanel);
 					break;
 				case "Easy":
+					bPanel.add(bImage);
+					bPanel.setOpaque(false);
+					c1.setOpaque(false);
+					c2.setOpaque(false);
+					c1.add(imagePTank);
+					c2.add(imageIATank);
+					c1.setBounds(330, 730, 200, 200);
+					c2.setBounds(1100, 730, 200, 200);
+					bPanel.setBounds(0, 0, 1500, 1000);
+					this.add(c1);
+					this.add(c2);
+					this.add(bPanel);
 					break;
 				case "Difficult":
+					bPanel.add(bImage);
+					bPanel.setOpaque(false);
+					c1.setOpaque(false);
+					c2.setOpaque(false);
+					c1.add(imagePTank);
+					c2.add(imageIATank);
+					c1.setBounds(330, 730, 200, 200);
+					c2.setBounds(1100, 730, 200, 200);
+					bPanel.setBounds(0, 0, 1500, 1000);
+					this.add(c1);
+					this.add(c2);
+					this.add(bPanel);
 					break;
 				default :
 					break;

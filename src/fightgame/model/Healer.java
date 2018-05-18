@@ -13,11 +13,14 @@ public class Healer extends Character{
 	private static final int HEALTHPOINT = 4;
 	private static final int ATTACKPOWER = 1;
 
+	private int hp;
+	
 	//Constructor : create a healer character with healers's caracteristics and read the healer's image
 	public Healer() {
 		super(HEALTHPOINT, ATTACKPOWER);
 		
 		bImage = new ArrayList();
+		hp = HEALTHPOINT;
 		
 		try {
 			image = ImageIO.read(new File("healer.png"));
@@ -31,6 +34,14 @@ public class Healer extends Character{
 	@Override
 	public ArrayList<Image> getImage() {
 		return this.bImage;
+	}
+	
+	public int getHp() {
+		return this.hp;
+	}
+	
+	public int getAp() {
+		return this.ATTACKPOWER;
 	}
 	
 }

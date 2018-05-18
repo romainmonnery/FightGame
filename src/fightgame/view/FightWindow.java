@@ -15,9 +15,10 @@ import javax.swing.JLayeredPane;
 import javax.swing.JPanel;
 
 import fightgame.controller.Difficulty;
-import fightgame.model.Background;
 import fightgame.model.Damager;
 import fightgame.model.Healer;
+import fightgame.model.Tank;
+import fightgame.model.Character;
 
 public class FightWindow extends JFrame {
 
@@ -35,6 +36,7 @@ public class FightWindow extends JFrame {
 	Difficulty r = Difficulty.RANDOM;
 	Difficulty e = Difficulty.EASY;
 	Difficulty d = Difficulty.HARD;
+	Character[] players; 
 
 	public FightWindow(String player, String IA, String difficulty) {
 		this.setTitle("FightGame");
@@ -70,6 +72,8 @@ public class FightWindow extends JFrame {
 					this.add(c1);
 					this.add(c2);
 					this.add(bPanel);
+					players[0] = new Healer();
+					players[1] = new Healer();
 					break;
 				case "Easy":
 					bPanel.add(bImage);
@@ -84,6 +88,8 @@ public class FightWindow extends JFrame {
 					this.add(c1);
 					this.add(c2);
 					this.add(bPanel);
+					players[0] = new Healer();
+					players[1] = new Healer();
 					break;
 				case "Difficult":
 					bPanel.add(bImage);
@@ -98,6 +104,8 @@ public class FightWindow extends JFrame {
 					this.add(c1);
 					this.add(c2);
 					this.add(bPanel);
+					players[0] = new Healer();
+					players[1] = new Healer();
 					break;
 				default :
 					break;
@@ -118,6 +126,8 @@ public class FightWindow extends JFrame {
 					this.add(c1);
 					this.add(c2);
 					this.add(bPanel);
+					players[0] = new Healer();
+					players[1] = new Damager();
 					break;
 				case "Easy":
 					bPanel.add(bImage);
@@ -132,6 +142,8 @@ public class FightWindow extends JFrame {
 					this.add(c1);
 					this.add(c2);
 					this.add(bPanel);
+					players[0] = new Healer();
+					players[1] = new Damager();
 					break;
 				case "Difficult":
 					bPanel.add(bImage);
@@ -146,6 +158,8 @@ public class FightWindow extends JFrame {
 					this.add(c1);
 					this.add(c2);
 					this.add(bPanel);
+					players[0] = new Healer();
+					players[1] = new Damager();
 					break;
 				}
 				break;
@@ -164,6 +178,8 @@ public class FightWindow extends JFrame {
 					this.add(c1);
 					this.add(c2);
 					this.add(bPanel);
+					players[0] = new Healer();
+					players[1] = new Tank();
 					break;
 				case "Easy":
 					bPanel.add(bImage);
@@ -178,6 +194,8 @@ public class FightWindow extends JFrame {
 					this.add(c1);
 					this.add(c2);
 					this.add(bPanel);
+					players[0] = new Healer();
+					players[1] = new Tank();
 					break;
 				case "Difficult":
 					bPanel.add(bImage);
@@ -192,6 +210,8 @@ public class FightWindow extends JFrame {
 					this.add(c1);
 					this.add(c2);
 					this.add(bPanel);
+					players[0] = new Healer();
+					players[1] = new Tank();
 					break;
 				}
 				break;
@@ -217,6 +237,8 @@ public class FightWindow extends JFrame {
 					this.add(c1);
 					this.add(c2);
 					this.add(bPanel);
+					players[0] = new Damager();
+					players[1] = new Healer();
 					break;
 				case "Easy":
 					bPanel.add(bImage);
@@ -231,6 +253,8 @@ public class FightWindow extends JFrame {
 					this.add(c1);
 					this.add(c2);
 					this.add(bPanel);
+					players[0] = new Damager();
+					players[1] = new Healer();
 					break;
 				case "Difficult":
 					bPanel.add(bImage);
@@ -245,6 +269,8 @@ public class FightWindow extends JFrame {
 					this.add(c1);
 					this.add(c2);
 					this.add(bPanel);
+					players[0] = new Damager();
+					players[1] = new Healer();
 					break;
 				default :
 					break;
@@ -265,6 +291,8 @@ public class FightWindow extends JFrame {
 					this.add(c1);
 					this.add(c2);
 					this.add(bPanel);
+					players[0] = new Damager();
+					players[1] = new Damager();
 					break;
 				case "Easy":
 					bPanel.add(bImage);
@@ -279,6 +307,8 @@ public class FightWindow extends JFrame {
 					this.add(c1);
 					this.add(c2);
 					this.add(bPanel);
+					players[0] = new Damager();
+					players[1] = new Damager();
 					break;
 				case "Difficult":
 					bPanel.add(bImage);
@@ -293,6 +323,8 @@ public class FightWindow extends JFrame {
 					this.add(c1);
 					this.add(c2);
 					this.add(bPanel);
+					players[0] = new Damager();
+					players[1] = new Damager();
 					break;
 				default :
 					break;
@@ -313,6 +345,8 @@ public class FightWindow extends JFrame {
 					this.add(c1);
 					this.add(c2);
 					this.add(bPanel);
+					players[0] = new Damager();
+					players[1] = new Tank();
 					break;
 				case "Easy":
 					bPanel.add(bImage);
@@ -327,6 +361,8 @@ public class FightWindow extends JFrame {
 					this.add(c1);
 					this.add(c2);
 					this.add(bPanel);
+					players[0] = new Damager();
+					players[1] = new Tank();
 					break;
 				case "Difficult":
 					bPanel.add(bImage);
@@ -341,6 +377,8 @@ public class FightWindow extends JFrame {
 					this.add(c1);
 					this.add(c2);
 					this.add(bPanel);
+					players[0] = new Damager();
+					players[1] = new Tank();
 					break;
 				default :
 					break;
@@ -368,6 +406,8 @@ public class FightWindow extends JFrame {
 					this.add(c1);
 					this.add(c2);
 					this.add(bPanel);
+					players[0] = new Tank();
+					players[1] = new Healer();
 					break;
 				case "Easy":
 					bPanel.add(bImage);
@@ -382,6 +422,8 @@ public class FightWindow extends JFrame {
 					this.add(c1);
 					this.add(c2);
 					this.add(bPanel);
+					players[0] = new Tank();
+					players[1] = new Healer();
 					break;
 				case "Difficult":
 					bPanel.add(bImage);
@@ -396,6 +438,8 @@ public class FightWindow extends JFrame {
 					this.add(c1);
 					this.add(c2);
 					this.add(bPanel);
+					players[0] = new Tank();
+					players[1] = new Healer();
 					break;
 				default :
 					break;
@@ -416,6 +460,8 @@ public class FightWindow extends JFrame {
 					this.add(c1);
 					this.add(c2);
 					this.add(bPanel);
+					players[0] = new Tank();
+					players[1] = new Damager();
 					break;
 				case "Easy":
 					bPanel.add(bImage);
@@ -430,6 +476,8 @@ public class FightWindow extends JFrame {
 					this.add(c1);
 					this.add(c2);
 					this.add(bPanel);
+					players[0] = new Tank();
+					players[1] = new Damager();
 					break;
 				case "Difficult":
 					bPanel.add(bImage);
@@ -444,6 +492,8 @@ public class FightWindow extends JFrame {
 					this.add(c1);
 					this.add(c2);
 					this.add(bPanel);
+					players[0] = new Tank();
+					players[1] = new Damager();
 					break;
 				default :
 					break;
@@ -464,6 +514,8 @@ public class FightWindow extends JFrame {
 					this.add(c1);
 					this.add(c2);
 					this.add(bPanel);
+					players[0] = new Tank();
+					players[1] = new Tank();
 					break;
 				case "Easy":
 					bPanel.add(bImage);
@@ -478,6 +530,8 @@ public class FightWindow extends JFrame {
 					this.add(c1);
 					this.add(c2);
 					this.add(bPanel);
+					players[0] = new Tank();
+					players[1] = new Tank();
 					break;
 				case "Difficult":
 					bPanel.add(bImage);
@@ -492,6 +546,8 @@ public class FightWindow extends JFrame {
 					this.add(c1);
 					this.add(c2);
 					this.add(bPanel);
+					players[0] = new Tank();
+					players[1] = new Tank();
 					break;
 				default :
 					break;

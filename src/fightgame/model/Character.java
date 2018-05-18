@@ -23,4 +23,5 @@ public abstract class Character {
 	// Getting the image of a specific character
 	public abstract ArrayList<Image> getImage();
 
+	
 }

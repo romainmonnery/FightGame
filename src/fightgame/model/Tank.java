@@ -12,12 +12,14 @@ public class Tank extends Character {
 	//Final and static attributes which are specific to a tank character
 	private static final int HEALTHPOINT = 5;
 	private static final int ATTACKPOWER = 1;
+	private int hp;
 
 	//Constructor : create a healer character with tank's caracteristics and read the tank's image
 	public Tank() {
 		super(HEALTHPOINT, ATTACKPOWER);
 		
 		bImage = new ArrayList();
+		hp = HEALTHPOINT;
 		
 		try {
 			image = ImageIO.read(new File("tauren.png"));
@@ -31,6 +33,14 @@ public class Tank extends Character {
 	@Override
 	public ArrayList<Image> getImage() {
 		return this.bImage;
+	}
+	
+	public int getHp() {
+		return this.hp;
+	}
+	
+	public int getAp() {
+		return this.ATTACKPOWER;
 	}
 
 }

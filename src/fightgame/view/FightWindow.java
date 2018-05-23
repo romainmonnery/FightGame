@@ -30,9 +30,13 @@ public class FightWindow extends JFrame {
 	private JLabel imageIAHealer;
 	private JLabel imageIATank;
 	private JLabel imageIADamager;
+	private JLabel player1Hp;
+	private JLabel player2Hp;
 	private JLayeredPane jlp;
 	private JPanel c1;
 	private JPanel c2;
+	private JPanel bdv1;
+	private JPanel bdv2;
 	private JButton attack;
 	private JButton block;
 	private JButton special;
@@ -50,6 +54,8 @@ public class FightWindow extends JFrame {
 		bPanel = new JPanel();
 		c1 = new JPanel();
 		c2 = new JPanel();
+		bdv1 = new JPanel();
+		bdv2 = new JPanel();
 		bImage = new JLabel(new ImageIcon("BackgroundImage.gif"));
 		imagePHealer = new JLabel(new ImageIcon("healer.png"));
 		imagePDamager = new JLabel(new ImageIcon("orc_lord.png"));
@@ -76,6 +82,16 @@ public class FightWindow extends JFrame {
 			case "Healer":
 				switch (difficulty) {
 				case "Random":
+					player1Hp = new JLabel(new ImageIcon("bdvmax.png"));
+					player2Hp = new JLabel(new ImageIcon("bdvmax.png"));
+					bdv1.add(player1Hp);
+					bdv2.add(player2Hp);
+					bdv1.setOpaque(false);
+					bdv2.setOpaque(false);
+					bdv1.setBounds(200, 300, 377, 68);
+					bdv2.setBounds(1000, 300, 377, 68);
+					this.add(bdv1);
+					this.add(bdv2);
 					bPanel.add(bImage);
 					bPanel.setOpaque(false);
 					c1.setOpaque(false);
@@ -92,6 +108,16 @@ public class FightWindow extends JFrame {
 					players[1] = new Healer();
 					break;
 				case "Easy":
+					player1Hp = new JLabel(new ImageIcon("bdvmax.png"));
+					player2Hp = new JLabel(new ImageIcon("bdvmax.png"));
+					bdv1.add(player1Hp);
+					bdv2.add(player2Hp);
+					bdv1.setOpaque(false);
+					bdv2.setOpaque(false);
+					bdv1.setBounds(200, 300, 377, 68);
+					bdv2.setBounds(1000, 300, 377, 68);
+					this.add(bdv1);
+					this.add(bdv2);
 					bPanel.add(bImage);
 					bPanel.setOpaque(false);
 					c1.setOpaque(false);
@@ -108,6 +134,16 @@ public class FightWindow extends JFrame {
 					players[1] = new Healer();
 					break;
 				case "Difficult":
+					player1Hp = new JLabel(new ImageIcon("bdvmax.png"));
+					player2Hp = new JLabel(new ImageIcon("bdvmax.png"));
+					bdv1.add(player1Hp);
+					bdv2.add(player2Hp);
+					bdv1.setOpaque(false);
+					bdv2.setOpaque(false);
+					bdv1.setBounds(200, 300, 377, 68);
+					bdv2.setBounds(1000, 300, 377, 68);
+					this.add(bdv1);
+					this.add(bdv2);
 					bPanel.add(bImage);
 					bPanel.setOpaque(false);
 					c1.setOpaque(false);
@@ -130,6 +166,16 @@ public class FightWindow extends JFrame {
 			case "Damager":
 				switch (difficulty) {
 				case "Random":
+					player1Hp = new JLabel(new ImageIcon("bdvmax.png"));
+					player2Hp = new JLabel(new ImageIcon("bdvmax.png"));
+					bdv1.add(player1Hp);
+					bdv2.add(player2Hp);
+					bdv1.setOpaque(false);
+					bdv2.setOpaque(false);
+					bdv1.setBounds(200, 300, 377, 68);
+					bdv2.setBounds(1000, 300, 377, 68);
+					this.add(bdv1);
+					this.add(bdv2);
 					bPanel.add(bImage);
 					bPanel.setOpaque(false);
 					c1.setOpaque(false);
@@ -146,6 +192,16 @@ public class FightWindow extends JFrame {
 					players[1] = new Damager();
 					break;
 				case "Easy":
+					player1Hp = new JLabel(new ImageIcon("bdvmax.png"));
+					player2Hp = new JLabel(new ImageIcon("bdvmax.png"));
+					bdv1.add(player1Hp);
+					bdv2.add(player2Hp);
+					bdv1.setOpaque(false);
+					bdv2.setOpaque(false);
+					bdv1.setBounds(200, 300, 377, 68);
+					bdv2.setBounds(1000, 300, 377, 68);
+					this.add(bdv1);
+					this.add(bdv2);
 					bPanel.add(bImage);
 					bPanel.setOpaque(false);
 					c1.setOpaque(false);
@@ -162,6 +218,16 @@ public class FightWindow extends JFrame {
 					players[1] = new Damager();
 					break;
 				case "Difficult":
+					player1Hp = new JLabel(new ImageIcon("bdvmax.png"));
+					player2Hp = new JLabel(new ImageIcon("bdvmax.png"));
+					bdv1.add(player1Hp);
+					bdv2.add(player2Hp);
+					bdv1.setOpaque(false);
+					bdv2.setOpaque(false);
+					bdv1.setBounds(200, 300, 377, 68);
+					bdv2.setBounds(1000, 300, 377, 68);
+					this.add(bdv1);
+					this.add(bdv2);
 					bPanel.add(bImage);
 					bPanel.setOpaque(false);
 					c1.setOpaque(false);
@@ -182,6 +248,16 @@ public class FightWindow extends JFrame {
 			case "Tank":
 				switch (difficulty) {
 				case "Random":
+					player1Hp = new JLabel(new ImageIcon("bdvmax.png"));
+					player2Hp = new JLabel(new ImageIcon("bdvmax.png"));
+					bdv1.add(player1Hp);
+					bdv2.add(player2Hp);
+					bdv1.setOpaque(false);
+					bdv2.setOpaque(false);
+					bdv1.setBounds(200, 300, 377, 68);
+					bdv2.setBounds(1000, 300, 377, 68);
+					this.add(bdv1);
+					this.add(bdv2);
 					bPanel.add(bImage);
 					bPanel.setOpaque(false);
 					c1.setOpaque(false);
@@ -198,6 +274,16 @@ public class FightWindow extends JFrame {
 					players[1] = new Tank();
 					break;
 				case "Easy":
+					player1Hp = new JLabel(new ImageIcon("bdvmax.png"));
+					player2Hp = new JLabel(new ImageIcon("bdvmax.png"));
+					bdv1.add(player1Hp);
+					bdv2.add(player2Hp);
+					bdv1.setOpaque(false);
+					bdv2.setOpaque(false);
+					bdv1.setBounds(200, 300, 377, 68);
+					bdv2.setBounds(1000, 300, 377, 68);
+					this.add(bdv1);
+					this.add(bdv2);
 					bPanel.add(bImage);
 					bPanel.setOpaque(false);
 					c1.setOpaque(false);
@@ -214,6 +300,16 @@ public class FightWindow extends JFrame {
 					players[1] = new Tank();
 					break;
 				case "Difficult":
+					player1Hp = new JLabel(new ImageIcon("bdvmax.png"));
+					player2Hp = new JLabel(new ImageIcon("bdvmax.png"));
+					bdv1.add(player1Hp);
+					bdv2.add(player2Hp);
+					bdv1.setOpaque(false);
+					bdv2.setOpaque(false);
+					bdv1.setBounds(200, 300, 377, 68);
+					bdv2.setBounds(1000, 300, 377, 68);
+					this.add(bdv1);
+					this.add(bdv2);
 					bPanel.add(bImage);
 					bPanel.setOpaque(false);
 					c1.setOpaque(false);
@@ -241,6 +337,16 @@ public class FightWindow extends JFrame {
 			case "Healer":
 				switch (difficulty) {
 				case "Random":
+					player1Hp = new JLabel(new ImageIcon("bdvmax.png"));
+					player2Hp = new JLabel(new ImageIcon("bdvmax.png"));
+					bdv1.add(player1Hp);
+					bdv2.add(player2Hp);
+					bdv1.setOpaque(false);
+					bdv2.setOpaque(false);
+					bdv1.setBounds(200, 300, 377, 68);
+					bdv2.setBounds(1000, 300, 377, 68);
+					this.add(bdv1);
+					this.add(bdv2);
 					bPanel.add(bImage);
 					bPanel.setOpaque(false);
 					c1.setOpaque(false);
@@ -257,6 +363,16 @@ public class FightWindow extends JFrame {
 					players[1] = new Healer();
 					break;
 				case "Easy":
+					player1Hp = new JLabel(new ImageIcon("bdvmax.png"));
+					player2Hp = new JLabel(new ImageIcon("bdvmax.png"));
+					bdv1.add(player1Hp);
+					bdv2.add(player2Hp);
+					bdv1.setOpaque(false);
+					bdv2.setOpaque(false);
+					bdv1.setBounds(200, 300, 377, 68);
+					bdv2.setBounds(1000, 300, 377, 68);
+					this.add(bdv1);
+					this.add(bdv2);
 					bPanel.add(bImage);
 					bPanel.setOpaque(false);
 					c1.setOpaque(false);
@@ -273,6 +389,16 @@ public class FightWindow extends JFrame {
 					players[1] = new Healer();
 					break;
 				case "Difficult":
+					player1Hp = new JLabel(new ImageIcon("bdvmax.png"));
+					player2Hp = new JLabel(new ImageIcon("bdvmax.png"));
+					bdv1.add(player1Hp);
+					bdv2.add(player2Hp);
+					bdv1.setOpaque(false);
+					bdv2.setOpaque(false);
+					bdv1.setBounds(200, 300, 377, 68);
+					bdv2.setBounds(1000, 300, 377, 68);
+					this.add(bdv1);
+					this.add(bdv2);
 					bPanel.add(bImage);
 					bPanel.setOpaque(false);
 					c1.setOpaque(false);
@@ -295,6 +421,16 @@ public class FightWindow extends JFrame {
 			case "Damager":
 				switch (difficulty) {
 				case "Random":
+					player1Hp = new JLabel(new ImageIcon("bdvmax.png"));
+					player2Hp = new JLabel(new ImageIcon("bdvmax.png"));
+					bdv1.add(player1Hp);
+					bdv2.add(player2Hp);
+					bdv1.setOpaque(false);
+					bdv2.setOpaque(false);
+					bdv1.setBounds(200, 300, 377, 68);
+					bdv2.setBounds(1000, 300, 377, 68);
+					this.add(bdv1);
+					this.add(bdv2);
 					bPanel.add(bImage);
 					bPanel.setOpaque(false);
 					c1.setOpaque(false);
@@ -311,6 +447,16 @@ public class FightWindow extends JFrame {
 					players[1] = new Damager();
 					break;
 				case "Easy":
+					player1Hp = new JLabel(new ImageIcon("bdvmax.png"));
+					player2Hp = new JLabel(new ImageIcon("bdvmax.png"));
+					bdv1.add(player1Hp);
+					bdv2.add(player2Hp);
+					bdv1.setOpaque(false);
+					bdv2.setOpaque(false);
+					bdv1.setBounds(200, 300, 377, 68);
+					bdv2.setBounds(1000, 300, 377, 68);
+					this.add(bdv1);
+					this.add(bdv2);
 					bPanel.add(bImage);
 					bPanel.setOpaque(false);
 					c1.setOpaque(false);
@@ -327,6 +473,16 @@ public class FightWindow extends JFrame {
 					players[1] = new Damager();
 					break;
 				case "Difficult":
+					player1Hp = new JLabel(new ImageIcon("bdvmax.png"));
+					player2Hp = new JLabel(new ImageIcon("bdvmax.png"));
+					bdv1.add(player1Hp);
+					bdv2.add(player2Hp);
+					bdv1.setOpaque(false);
+					bdv2.setOpaque(false);
+					bdv1.setBounds(200, 300, 377, 68);
+					bdv2.setBounds(1000, 300, 377, 68);
+					this.add(bdv1);
+					this.add(bdv2);
 					bPanel.add(bImage);
 					bPanel.setOpaque(false);
 					c1.setOpaque(false);
@@ -349,6 +505,16 @@ public class FightWindow extends JFrame {
 			case "Tank":
 				switch (difficulty) {
 				case "Random":
+					player1Hp = new JLabel(new ImageIcon("bdvmax.png"));
+					player2Hp = new JLabel(new ImageIcon("bdvmax.png"));
+					bdv1.add(player1Hp);
+					bdv2.add(player2Hp);
+					bdv1.setOpaque(false);
+					bdv2.setOpaque(false);
+					bdv1.setBounds(200, 300, 377, 68);
+					bdv2.setBounds(1000, 300, 377, 68);
+					this.add(bdv1);
+					this.add(bdv2);
 					bPanel.add(bImage);
 					bPanel.setOpaque(false);
 					c1.setOpaque(false);
@@ -365,6 +531,16 @@ public class FightWindow extends JFrame {
 					players[1] = new Tank();
 					break;
 				case "Easy":
+					player1Hp = new JLabel(new ImageIcon("bdvmax.png"));
+					player2Hp = new JLabel(new ImageIcon("bdvmax.png"));
+					bdv1.add(player1Hp);
+					bdv2.add(player2Hp);
+					bdv1.setOpaque(false);
+					bdv2.setOpaque(false);
+					bdv1.setBounds(200, 300, 377, 68);
+					bdv2.setBounds(1000, 300, 377, 68);
+					this.add(bdv1);
+					this.add(bdv2);
 					bPanel.add(bImage);
 					bPanel.setOpaque(false);
 					c1.setOpaque(false);
@@ -381,6 +557,16 @@ public class FightWindow extends JFrame {
 					players[1] = new Tank();
 					break;
 				case "Difficult":
+					player1Hp = new JLabel(new ImageIcon("bdvmax.png"));
+					player2Hp = new JLabel(new ImageIcon("bdvmax.png"));
+					bdv1.add(player1Hp);
+					bdv2.add(player2Hp);
+					bdv1.setOpaque(false);
+					bdv2.setOpaque(false);
+					bdv1.setBounds(200, 300, 377, 68);
+					bdv2.setBounds(1000, 300, 377, 68);
+					this.add(bdv1);
+					this.add(bdv2);
 					bPanel.add(bImage);
 					bPanel.setOpaque(false);
 					c1.setOpaque(false);
@@ -410,6 +596,16 @@ public class FightWindow extends JFrame {
 			case "Healer":
 				switch (difficulty) {
 				case "Random":
+					player1Hp = new JLabel(new ImageIcon("bdvmax.png"));
+					player2Hp = new JLabel(new ImageIcon("bdvmax.png"));
+					bdv1.add(player1Hp);
+					bdv2.add(player2Hp);
+					bdv1.setOpaque(false);
+					bdv2.setOpaque(false);
+					bdv1.setBounds(200, 300, 377, 68);
+					bdv2.setBounds(1000, 300, 377, 68);
+					this.add(bdv1);
+					this.add(bdv2);
 					bPanel.add(bImage);
 					bPanel.setOpaque(false);
 					c1.setOpaque(false);
@@ -426,6 +622,16 @@ public class FightWindow extends JFrame {
 					players[1] = new Healer();
 					break;
 				case "Easy":
+					player1Hp = new JLabel(new ImageIcon("bdvmax.png"));
+					player2Hp = new JLabel(new ImageIcon("bdvmax.png"));
+					bdv1.add(player1Hp);
+					bdv2.add(player2Hp);
+					bdv1.setOpaque(false);
+					bdv2.setOpaque(false);
+					bdv1.setBounds(200, 300, 377, 68);
+					bdv2.setBounds(1000, 300, 377, 68);
+					this.add(bdv1);
+					this.add(bdv2);
 					bPanel.add(bImage);
 					bPanel.setOpaque(false);
 					c1.setOpaque(false);
@@ -442,6 +648,16 @@ public class FightWindow extends JFrame {
 					players[1] = new Healer();
 					break;
 				case "Difficult":
+					player1Hp = new JLabel(new ImageIcon("bdvmax.png"));
+					player2Hp = new JLabel(new ImageIcon("bdvmax.png"));
+					bdv1.add(player1Hp);
+					bdv2.add(player2Hp);
+					bdv1.setOpaque(false);
+					bdv2.setOpaque(false);
+					bdv1.setBounds(200, 300, 377, 68);
+					bdv2.setBounds(1000, 300, 377, 68);
+					this.add(bdv1);
+					this.add(bdv2);
 					bPanel.add(bImage);
 					bPanel.setOpaque(false);
 					c1.setOpaque(false);
@@ -464,6 +680,16 @@ public class FightWindow extends JFrame {
 			case "Damager":
 				switch (difficulty) {
 				case "Random":
+					player1Hp = new JLabel(new ImageIcon("bdvmax.png"));
+					player2Hp = new JLabel(new ImageIcon("bdvmax.png"));
+					bdv1.add(player1Hp);
+					bdv2.add(player2Hp);
+					bdv1.setOpaque(false);
+					bdv2.setOpaque(false);
+					bdv1.setBounds(200, 300, 377, 68);
+					bdv2.setBounds(1000, 300, 377, 68);
+					this.add(bdv1);
+					this.add(bdv2);
 					bPanel.add(bImage);
 					bPanel.setOpaque(false);
 					c1.setOpaque(false);
@@ -480,6 +706,16 @@ public class FightWindow extends JFrame {
 					players[1] = new Damager();
 					break;
 				case "Easy":
+					player1Hp = new JLabel(new ImageIcon("bdvmax.png"));
+					player2Hp = new JLabel(new ImageIcon("bdvmax.png"));
+					bdv1.add(player1Hp);
+					bdv2.add(player2Hp);
+					bdv1.setOpaque(false);
+					bdv2.setOpaque(false);
+					bdv1.setBounds(200, 300, 377, 68);
+					bdv2.setBounds(1000, 300, 377, 68);
+					this.add(bdv1);
+					this.add(bdv2);
 					bPanel.add(bImage);
 					bPanel.setOpaque(false);
 					c1.setOpaque(false);
@@ -496,6 +732,16 @@ public class FightWindow extends JFrame {
 					players[1] = new Damager();
 					break;
 				case "Difficult":
+					player1Hp = new JLabel(new ImageIcon("bdvmax.png"));
+					player2Hp = new JLabel(new ImageIcon("bdvmax.png"));
+					bdv1.add(player1Hp);
+					bdv2.add(player2Hp);
+					bdv1.setOpaque(false);
+					bdv2.setOpaque(false);
+					bdv1.setBounds(200, 300, 377, 68);
+					bdv2.setBounds(1000, 300, 377, 68);
+					this.add(bdv1);
+					this.add(bdv2);
 					bPanel.add(bImage);
 					bPanel.setOpaque(false);
 					c1.setOpaque(false);
@@ -518,6 +764,16 @@ public class FightWindow extends JFrame {
 			case "Tank":
 				switch (difficulty) {
 				case "Random":
+					player1Hp = new JLabel(new ImageIcon("bdvmax.png"));
+					player2Hp = new JLabel(new ImageIcon("bdvmax.png"));
+					bdv1.add(player1Hp);
+					bdv2.add(player2Hp);
+					bdv1.setOpaque(false);
+					bdv2.setOpaque(false);
+					bdv1.setBounds(200, 300, 377, 68);
+					bdv2.setBounds(1000, 300, 377, 68);
+					this.add(bdv1);
+					this.add(bdv2);
 					bPanel.add(bImage);
 					bPanel.setOpaque(false);
 					c1.setOpaque(false);
@@ -534,6 +790,16 @@ public class FightWindow extends JFrame {
 					players[1] = new Tank();
 					break;
 				case "Easy":
+					player1Hp = new JLabel(new ImageIcon("bdvmax.png"));
+					player2Hp = new JLabel(new ImageIcon("bdvmax.png"));
+					bdv1.add(player1Hp);
+					bdv2.add(player2Hp);
+					bdv1.setOpaque(false);
+					bdv2.setOpaque(false);
+					bdv1.setBounds(200, 300, 377, 68);
+					bdv2.setBounds(1000, 300, 377, 68);
+					this.add(bdv1);
+					this.add(bdv2);
 					bPanel.add(bImage);
 					bPanel.setOpaque(false);
 					c1.setOpaque(false);
@@ -550,6 +816,16 @@ public class FightWindow extends JFrame {
 					players[1] = new Tank();
 					break;
 				case "Difficult":
+					player1Hp = new JLabel(new ImageIcon("bdvmax.png"));
+					player2Hp = new JLabel(new ImageIcon("bdvmax.png"));
+					bdv1.add(player1Hp);
+					bdv2.add(player2Hp);
+					bdv1.setOpaque(false);
+					bdv2.setOpaque(false);
+					bdv1.setBounds(200, 300, 377, 68);
+					bdv2.setBounds(1000, 300, 377, 68);
+					this.add(bdv1);
+					this.add(bdv2);
 					bPanel.add(bImage);
 					bPanel.setOpaque(false);
 					c1.setOpaque(false);

@@ -12,7 +12,6 @@ public class Tank extends Character {
 	//Final and static attributes which are specific to a tank character
 	private static final int HEALTHPOINT = 5;
 	private static final int ATTACKPOWER = 1;
-	private int hp;
 
 	//Constructor : create a healer character with tank's caracteristics and read the tank's image
 	public Tank() {
@@ -33,11 +32,6 @@ public class Tank extends Character {
 	@Override
 	public ArrayList<Image> getImage() {
 		return this.bImage;
-	}
-	
-	//Getting current hp of a character
-	public int getHp() {
-		return this.hp;
 	}
 	
 	//Getting the attack power of a character

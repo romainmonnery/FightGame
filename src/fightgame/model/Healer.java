@@ -12,8 +12,6 @@ public class Healer extends Character{
 	//Final and static attributes which are specific to a healer character
 	private static final int HEALTHPOINT = 4;
 	private static final int ATTACKPOWER = 1;
-
-	private int hp;
 	
 	//Constructor : create a healer character with healers's caracteristics and read the healer's image
 	public Healer() {
@@ -34,11 +32,6 @@ public class Healer extends Character{
 	@Override
 	public ArrayList<Image> getImage() {
 		return this.bImage;
-	}
-	
-	//Getting current hp of a character
-	public int getHp() {
-		return this.hp;
 	}
 	
 	//Getting the attack power of a character

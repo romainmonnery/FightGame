@@ -1,25 +1,16 @@
 package fightgame.controller;
+import fightgame.model.Character;
 
 public class FightMecanics {
-
-	public void attack(String attacker, Character target) {
-
-		switch (attacker) {
-		case "Healer":
-			break;
-		case "Damager":
-			break;
-		case "Tank":
-			break;
-		}
-
+		
+	//Method which set the correct amount of hp after an attack
+	public void attack(Character attacker, Character target) {
+		target.setHp(target.getHp() - attacker.getAp());
 	}
-
-	public void block() {
-
+	
+	public void block(Character blocker) {
+		blocker.setHp(blocker.getHp()); 
 	}
-
-	public void special() {
-
-	}
+	
+	
 }

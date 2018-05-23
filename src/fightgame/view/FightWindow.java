@@ -33,6 +33,9 @@ public class FightWindow extends JFrame {
 	private JLayeredPane jlp;
 	private JPanel c1;
 	private JPanel c2;
+	private JButton attack;
+	private JButton block;
+	private JButton special;
 	Difficulty r = Difficulty.RANDOM;
 	Difficulty e = Difficulty.EASY;
 	Difficulty d = Difficulty.HARD;
@@ -40,7 +43,7 @@ public class FightWindow extends JFrame {
 
 	public FightWindow(String player, String IA, String difficulty) {
 		this.setTitle("FightGame");
-		this.setSize(1500, 1000);
+		this.setSize(1900, 1000);
 		this.setLayout(null);
 		this.players = new Character[2];
 
@@ -54,7 +57,19 @@ public class FightWindow extends JFrame {
 		imageIAHealer = new JLabel(new ImageIcon("healer.png"));
 		imageIADamager = new JLabel(new ImageIcon("orc_lord.png"));
 		imageIATank = new JLabel(new ImageIcon("tauren.png"));
-		//jlp = new JLayeredPane()
+		attack = new JButton("Attack");
+		block = new JButton("Block");
+		special = new JButton("Special Attack");
+		
+		//Coordinates of the buttons
+		attack.setBounds(1500, 5, 400, 333);
+		block.setBounds(1500, 333, 400, 333);
+		special.setBounds(1500, 666, 400, 334);
+		
+		//Adding the buttons
+		this.add(attack);
+		this.add(block);
+		this.add(special);
 		
 		if (player == "Healer") {
 			switch (IA) {

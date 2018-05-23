@@ -8,6 +8,8 @@ public abstract class Character {
 	// Attributes that are the main caracteristics of each character
 	protected int healthPoint;
 	protected int attackPower;
+	//Current health points
+	protected int hp;
 	// Here a the attributes used to read the image and stock it
 	protected Image image;
 	protected ArrayList<Image> bImage;
@@ -22,6 +24,15 @@ public abstract class Character {
 
 	// Getting the image of a specific character
 	public abstract ArrayList<Image> getImage();
+	public abstract int getAp();
+	
+	public int getHp() {
+		return this.hp;
+	}
+	
+	public void setHp(int hp) {
+		this.hp = hp;
+	}
 
 	
 }

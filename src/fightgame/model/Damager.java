@@ -12,7 +12,7 @@ public class Damager extends Character {
 	// Final and static attributes which are specific to a damager character
 	private static final int HEALTHPOINT = 3;
 	private static final int ATTACKPOWER = 2;
-	private int hp;
+	
 
 	// Constructor : create a healer character with damager's caracteristics and
 	// read the damager's image
@@ -36,19 +36,13 @@ public class Damager extends Character {
 		return this.bImage;
 	}
 
-	// Getting current hp of a character
-	public int getHp() {
-		return this.hp;
-	}
-
 	// Getting the attack power of a character
 	public int getAp() {
 		return this.ATTACKPOWER;
 	}
 
-	//Method which calculates the amount of damage dealt by an attack of a damagr character
-	public void attackDamager() {
-		this.hp = this.getHp() - this.getAp();
 
-	}
+
+
+
 }

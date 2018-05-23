@@ -42,6 +42,7 @@ public class FightWindow extends JFrame {
 		this.setTitle("FightGame");
 		this.setSize(1500, 1000);
 		this.setLayout(null);
+		this.players = new Character[2];
 
 		bPanel = new JPanel();
 		c1 = new JPanel();

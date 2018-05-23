@@ -35,10 +35,12 @@ public class Tank extends Character {
 		return this.bImage;
 	}
 	
+	//Getting current hp of a character
 	public int getHp() {
 		return this.hp;
 	}
 	
+	//Getting the attack power of a character
 	public int getAp() {
 		return this.ATTACKPOWER;
 	}
